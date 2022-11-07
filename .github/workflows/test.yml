@@ -16,7 +16,7 @@ jobs:
       run: |
         curl -sL https://github.com/LightningMods/libtest/blob/main/mbedtls-2.16.6.tar?raw=truez | tar xvf mbedtls-2.16.6.tar
         curl -sL https://github.com/LightningMods/libtest/blob/main/curl-7.64.1.tar?raw=truez | tar xvf curl-7.64.1.tar
-        wget https://raw.githubusercontent.com/bucanero/SDL-PS4/ps4/cmake/openorbis.cmake
+        wget https://raw.githubusercontent.com/LightningMods/libtest/main/openorbis.cmake
 
     - name: Set env vars
       id: slug
