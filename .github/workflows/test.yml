@@ -61,10 +61,11 @@ jobs:
         cmake --toolchain ../../openorbis.cmake .. -DCMAKE_USE_MBEDTLS=1 -DUSE_UNIX_SOCKETS=0 -DENABLE_THREADED_RESOLVER=0 -DENABLE_IPV6=0
         make libcurl
         cp lib/libcurl.a "${OO_PS4_TOOLCHAIN}/lib"
+        ls
 
     - name: Compress output
       run: |
-        tar -zcvf build.tar.gz ${OO_PS4_TOOLCHAIN}/lib/libcurl.a ${OO_PS4_TOOLCHAIN}/lib/libmbedtls.a
+        tar -zcvf build.tar.gz ${OO_PS4_TOOLCHAIN}/lib/libcurl.a ${OO_PS4_TOOLCHAIN}/lib/libmbedtls*.a
     - uses: actions/upload-artifact@v3.1.1
       with:
         name: build-libs
