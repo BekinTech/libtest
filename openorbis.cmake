@@ -72,7 +72,7 @@ set(CMAKE_CXX_LINK_EXECUTABLE "<CMAKE_LINKER> -o <TARGET> <CMAKE_CXX_LINK_FLAGS>
 
 # Start find_package in config mode
 set(CMAKE_FIND_PACKAGE_PREFER_CONFIG TRUE)
-add_self()
+
 # Set pkg-config for the same
 find_program(PKG_CONFIG_EXECUTABLE NAMES openorbis-pkg-config HINTS "${OPENORBIS}/usr/bin")
 if (NOT PKG_CONFIG_EXECUTABLE)
