@@ -61,6 +61,7 @@ jobs:
         cmake --toolchain ../../openorbis.cmake .. -DCMAKE_USE_MBEDTLS=1 -DUSE_UNIX_SOCKETS=0 -DENABLE_THREADED_RESOLVER=0 -DENABLE_IPV6=0
         make libcurl
         cp lib/libcurl.a "${OO_PS4_TOOLCHAIN}/lib"
+        cmake -p add_self
         ls lib
 
     - name: Compress output
