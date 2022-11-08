@@ -62,7 +62,7 @@ set(CMAKE_C_FLAGS_INIT "${PS4_COMMON_FLAGS}")
 set(CMAKE_CXX_FLAGS_INIT "${PS4_COMMON_FLAGS} -I${OPENORBIS}/include/c++/v1")
 set(CMAKE_ASM_FLAGS_INIT "${PS4_COMMON_FLAGS}")
 
-set(PS4_LINKER_FLAGS "-m elf_x86_64 -pie --eh-frame-hdr --script ${OPENORBIS}/link.x ${OPENORBIS}/lib/crt1.o")
+set(PS4_LINKER_FLAGS "-m elf_x86_64 -pie --script ${OPENORBIS}/link.x --eh-frame-hdr -L${OPENORBIS}/lib -lSceNet -lc -lc++ -lkernel ${OPENORBIS}/lib/crtlib.o")
 # crt1.o may be already added to LDFLAGS from "ps4vars.sh", so remove LDFLAGS env (todo: find a better way...)
 set(ENV{LDFLAGS} "" CACHE STRING FORCE)
 
