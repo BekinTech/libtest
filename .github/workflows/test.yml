@@ -64,9 +64,8 @@ jobs:
         ls lib
 
     - name: Compress output
-      working-directory: curl-7.64.1
       run: |
-        tar -zcvf build.tar.gz ${OO_PS4_TOOLCHAIN}/lib/libcurl.a ${OO_PS4_TOOLCHAIN}/lib/libmbedtls*.a lib
+        tar -zcvf build.tar.gz ${OO_PS4_TOOLCHAIN}/lib/libcurl.a ${OO_PS4_TOOLCHAIN}/lib/libmbedtls*.a curl-7.64.1/lib/*
     - uses: actions/upload-artifact@v3.1.1
       with:
         name: build-libs
