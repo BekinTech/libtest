@@ -48,7 +48,7 @@ jobs:
       working-directory: mbedtls-2.16.6
       run: |
         mkdir orbis && cd orbis
-        cmake --toolchain ../../openorbis.cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_TESTING=FALSE -DENABLE_PROGRAMS=FALSE -DMBEDTLS_FATAL_WARNINGS=0
+        cmake --toolchain ../../openorbis.cmake .. -DCMAKE_BUILD_TYPE=Release -DMBEDTLS_NO_UDBL_DIVISION=1 -DENABLE_TESTING=FALSE -DENABLE_PROGRAMS=FALSE -DMBEDTLS_FATAL_WARNINGS=0
         make mbedtls
         cp library/*.a "${OO_PS4_TOOLCHAIN}/lib"
         cp -R ../include/mbedtls "${OO_PS4_TOOLCHAIN}/include/"
