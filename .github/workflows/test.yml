@@ -14,6 +14,7 @@ jobs:
 
     - name: Checkout Dependecies
       run: |
+        git clone https://github.com/bucanero/oosdk_libraries.git --depth 1
         curl -sL https://github.com/LightningMods/libtest/blob/main/curl-7.64.1.tar?raw=truez | tar xvf curl-7.64.1.tar
         wget https://raw.githubusercontent.com/LightningMods/libtest/main/openorbis.cmake
         
