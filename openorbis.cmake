@@ -53,6 +53,8 @@ set(BUILD_SHARED_LIBS OFF CACHE INTERNAL "Shared libs not available")
 ###################################################################
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CURL_CA_PATH "/data/ca.cert")
+set(CURL_CA_PATH_SET TRUE)
 
 set(PS4_COMMON_INCLUDES "-isysroot ${OPENORBIS} -isystem ${OPENORBIS}/include -I${OPENORBIS}/usr/include")
 set(PS4_COMMON_FLAGS "--target=x86_64-pc-freebsd12-elf -D__PS4__ -D__OPENORBIS__ -DMBEDTLS_NO_UDBL_DIVISION=1 -D__ORBIS__ -fPIC -funwind-tables -fdeclspec ${PS4_COMMON_INCLUDES}")
