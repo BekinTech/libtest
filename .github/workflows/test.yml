@@ -35,7 +35,7 @@ jobs:
       # temporary release until 0.53 is released
     - name: Download OpenOrbis Toolchain
       run: |
-        curl -sL https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain/releases/download/v0.5.2/v0.5.2.tar.gz | tar xvz -C ./
+        curl -sL https://github.com/illusion0001/OpenOrbis-PS4-Toolchain/releases/latest/download/toolchain.tar.gz | tar xvz -C ./
         echo "OO_PS4_TOOLCHAIN=${GITHUB_WORKSPACE}/OpenOrbis/PS4Toolchain" >> $GITHUB_ENV
         cp oosdk_libraries/build_rules.mk OpenOrbis/PS4Toolchain/build_rules.mk
 
